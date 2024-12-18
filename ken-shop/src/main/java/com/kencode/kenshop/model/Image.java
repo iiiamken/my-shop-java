@@ -13,7 +13,7 @@ import java.sql.Blob;
 @NoArgsConstructor
 @Entity
 public class Image {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String fileName;
