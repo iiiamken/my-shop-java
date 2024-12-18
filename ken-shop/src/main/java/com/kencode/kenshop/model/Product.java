@@ -24,6 +24,8 @@ public class Product {
     private int inventory;
     private String description;
 
+    @ManyToOne(cascade = CascadeType.ALL) // breaks the relationship so that the product can be deleted
+    @JoinColumn(name = "category_id")
     private Category category;
 
     @OneToMany(mappedBy = "product", cascade = CascadeType.ALL, orphanRemoval = true)
